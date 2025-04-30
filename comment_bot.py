@@ -7,9 +7,9 @@ def comment_on_posts(subreddit_name):
 
     for post in subreddit.hot(limit=5):
         analysis = analyze_text(post.title)
-        comment_text = f"AI Analysis: {analysis}"
-        post.reply(comment_text)
-        print(f"Commented on '{post.title}': {comment_text}")
+        post.reply(analysis)
+        print(f"Commented on '{post.title}': {analysis}")
+
 
 if __name__ == "__main__":
     subreddit = input("Enter subreddit to comment on: ")
